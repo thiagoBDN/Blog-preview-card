@@ -1,0 +1,141 @@
+*::before,
+*::after,
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+:root{
+    --yellow: hsl(47, 88%, 63%);
+    --white: hsl(0, 0%, 100%);
+    --gray--500: hsl(0, 0%, 42%);
+    --gray--950: hsl(0, 0%, 7%);
+
+    --fs-sm: clamp(12px, 1vw, 14px);
+    --fs-md: clamp(14px, 1.5vw, 16px);
+    --fs-lg: clamp(20px, 2.5vw, 24px);
+}
+
+
+p{
+    font-size: var(--fs-md);
+    line-height: 1.5;
+}
+
+body{
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--yellow);
+    background-size: cover;
+
+    font-family: "Figtree", sans-serif;
+    
+    min-height: 100vh;
+}
+
+.container{
+    width: min(384px, 90vw);
+}
+
+main{
+    margin-bottom: 9px;
+}
+
+.card{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 24px;
+
+    border-radius: 20px;
+
+    background-color: var(--white);
+
+    border: 2px solid black;
+    padding: 24px;
+
+    box-shadow: 8px 8px 0px 0px #000000;
+
+}
+
+.card-image{
+    justify-content: center;
+
+    width: 100%;
+
+    border-radius: 10px;
+}
+
+.card-description
+{
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 12px;
+}
+
+.card-type{
+    padding: 4px 12px;
+    border-radius: 4px;
+
+    width:max-content;
+
+    text-align: center;
+    color: var(--gray--950);
+    font-weight: 800;
+    font-size:  var(--fs-sm);
+    background-color: var(--yellow);
+}
+
+.card-date{
+    font-size: var(--fs-sm);
+    color: var(--gray--950);
+    font-weight: 600;
+}
+
+.card-title{
+    font-size: var(--fs-lg);
+    color: var(--gray--950);
+
+    transition: color 0.3s ease;
+}
+
+.card-title:hover{
+    color:var(--yellow);
+}
+
+.card-text{
+    color: var(--gray--500);
+    font-weight: 500;
+}
+
+.card-author{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    width: fit-content;
+    gap: 12px;
+}
+
+.card-author-img{
+    border-radius: 50%;
+
+    width: 32px;
+    height: 32px;
+}
+
+.card-author-name{
+    text-align: center;
+
+    font-size: var(--fs-sm);
+    font-weight: 800;
+}
+
+.attribution{
+    width: fit-content;
+    font-size: var(--fs-sm);
+}
